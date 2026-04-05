@@ -36,12 +36,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  IBOR_Project:
+  IBOR_project:
     # Applies to all files under models/example/
     Bronze:
+      +schema: Bronze
       +materialized: view
       +enabled: true
-      +schema: Bronze
       +tags: ['Bronze']
 
     Silver:
