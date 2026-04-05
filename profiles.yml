@@ -1,0 +1,31 @@
+IBOR_project:
+
+  target: dev
+
+  outputs:
+    dev:
+      type: snowflake
+      account: pec19693.us-east-1
+      # User/password auth
+      user: dbt_dev1
+      password: thanksGodLove31528
+      role: dbt_developers
+      database: IBOR_PROJECT
+      warehouse: dbt_wh
+      schema: Medallion
+      threads: 4
+      client_session_keep_alive: False
+
+    # prod:
+      # type: snowflake
+      # account: pec19693.us-east-1
+      # # User/password auth
+      # user: dbt_dev1
+      # password: thanksGodLove31528
+      # role: dbt_developers
+      # database: IBOR_PROJECT
+      # warehouse: dbt_wh
+      # schema: ibor_prod_schema
+      # threads: 4
+      # client_session_keep_alive: False
+ 
