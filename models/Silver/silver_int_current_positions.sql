@@ -39,7 +39,7 @@ with latest_positions as (
             order by position_date desc
         ) as rn
 
-    from {{ ref('int_positions_daily') }}
+    from {{ ref('silver_int_positions_daily') }}
 ),
 
 current_positions as (
@@ -70,7 +70,7 @@ latest_prices as (
             order by price_date desc
         ) as rn
 
-    from {{ ref('stg_market_prices') }}
+    from {{ ref('bronze_market_prices') }}
 ),
 
 current_prices as (
